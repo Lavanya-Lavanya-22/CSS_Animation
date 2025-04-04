@@ -1,0 +1,127 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h1{
+    text-align: center;
+    margin: 150px auto;
+}
+
+.main{
+    display: flex;
+    flex-wrap: wrap;
+    width: 300px;
+    height: 300px;
+    margin: 150px auto;
+
+}
+
+ .images{
+    flex-basis: 100px;
+    cursor: pointer;
+    position: relative;
+    transition: 2s;
+    box-sizing: 27px 41px 13px 4px rgba(0,0,0,0.10);
+    position: relative;
+}
+
+.images img{
+    width: 100%;
+    height: 100%;
+}
+
+.images::after{
+content: '';
+position: absolute;
+width: 100px;
+height: 30px;
+bottom: -29px;
+    left: 7px;
+background-color: rgba(180, 89, 55, 0.6);
+transform: skewX(26deg);
+}
+
+.images::before{
+    content: '';
+    position: absolute;
+    width: 15px;
+    height: 100px;
+    top: 12px;
+        right: -14px;
+    background-color: rgba(121, 55, 31, 0.6);
+    transform: skewY(65deg);
+    }
+    
+.images:nth-child(1)::before{
+    content: '';
+    height: 90px;
+}
+.images:nth-child(2)::before{
+    content: '';
+    height: 90px;
+}
+
+    .images:nth-child(3)::before{
+        content: '';
+        height: 90px;
+    }
+    .images:nth-child(4)::before{
+        content: '';
+        height: 160px;
+    }
+    .images:nth-child(5)::before{
+        content: '';
+        height: 160px;
+    }
+.images:nth-child(6)::before{
+    content: '';
+    height: 160px;
+}
+
+
+
+.main:hover .images:nth-child(1){
+    transform: translate(-150px,-150px) rotate(360deg);
+}
+
+
+.main:hover .images:nth-child(2){
+    transform: translate(0px,-250px) ;
+}
+
+
+.main:hover .images:nth-child(3){
+    transform: translate(150px,-150px) rotate(360deg);
+}
+
+
+.main:hover .images:nth-child(4){
+    transform: translate(-250px,0px);
+}
+
+
+.main:hover .images:nth-child(5){
+    transform:  rotate(360deg);
+}
+
+
+.main:hover .images:nth-child(6){
+    transform: translate(250px,0px) ;
+}
+
+
+.main:hover .images:nth-child(7){
+    transform: translate(-150px,150px) rotate(360deg);
+}
+
+
+.main:hover .images:nth-child(8){
+    transform: translate(0px,250px) ;
+}
+
+
+.main:hover .images:nth-child(9){
+    transform: translate(150px,150px) rotate(360deg);
+}
